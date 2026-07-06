@@ -18,7 +18,8 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler(IllegalArgumentException.class)
     public ResponseEntity<String> handleIllegalArgument(IllegalArgumentException e) {
-        // 401 UNAUTHORIZED (인증 실패) 상태 코드와 함께 예쁜 에러 메시지를 보냅니다.
+        // 401 UNAUTHORIZED (인증 실패) 상태 코드와 함께 에러 메시지를 보냄
+        .
         return ResponseEntity
                 .status(HttpStatus.UNAUTHORIZED)
                 .body(e.getMessage());
